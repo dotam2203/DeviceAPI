@@ -8,5 +8,4 @@ import java.util.List;
 
 @Repository
 public interface ThietBiRepository extends JpaRepository<ThietBiEntity, String> {
-    List<ThietBiEntity> findAllBymaTB(String maTB);
 }

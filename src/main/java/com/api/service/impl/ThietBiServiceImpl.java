@@ -25,9 +25,9 @@ public class ThietBiServiceImpl implements ThietBiService {
         List<ThietBiEntity> DSThietBi = thietBiRepository.findAll();
         return DSThietBi.stream().map(ThietBiDTO::new).collect(Collectors.toList());
     }
-    public List<ThietBiDTO> getDSTBtheoMaTB(String maTB){
-        List<ThietBiEntity> DSThietBi = thietBiRepository.findAllBymaTB(maTB);
-        return DSThietBi.stream().map(ThietBiDTO::new).collect(Collectors.toList());
+    public ThietBiDTO getThietBi(String maTB){
+        ThietBiEntity thietBiEntity = thietBiRepository.getById(maTB);
+        return new ThietBiDTO(thietBiEntity);
     }
 
     @Override
