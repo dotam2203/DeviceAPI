@@ -20,7 +20,7 @@ public class ChiTietDatDTO {
     private String maTB;
     private String maPhong;
 
-    public ChiTietDatDTO (ChiTietDatEntity chiTietDatEntity){
+    public ChiTietDatDTO(ChiTietDatEntity chiTietDatEntity) {
         this.idCTD = chiTietDatEntity.getIdCTD();
         this.ngayD = chiTietDatEntity.getNgayD();
         this.soLuongD = chiTietDatEntity.getSoLuongD();
@@ -28,13 +28,11 @@ public class ChiTietDatDTO {
         this.maPhong = chiTietDatEntity.getPhongHocD().getMaPhong();
     }
 
-    public ChiTietSDEntity toEntity(){
-        ChiTietSDEntity chiTietSDEntity = new ChiTietSDEntity();
-        if(this.idCTD != 0){
-            chiTietSDEntity.setIdCTSD(this.idCTD);
-            chiTietSDEntity.setNgaySD(this.ngayD);
-            chiTietSDEntity.setSoLuongSD(this.soLuongD);
-        }
-        return chiTietSDEntity;
+    public ChiTietDatEntity toEntity() {
+        ChiTietDatEntity chiTietDatEntity = new ChiTietDatEntity();
+        chiTietDatEntity.setIdCTD(this.idCTD);
+        chiTietDatEntity.setNgayD(this.ngayD);
+        chiTietDatEntity.setSoLuongD(this.soLuongD);
+        return chiTietDatEntity;
     }
 }

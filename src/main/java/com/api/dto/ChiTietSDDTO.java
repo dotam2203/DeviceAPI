@@ -19,20 +19,19 @@ public class ChiTietSDDTO {
     private String maTB;
     private String maPhong;
 
-    public ChiTietSDDTO (ChiTietSDEntity chiTietSDEntity){
+    public ChiTietSDDTO(ChiTietSDEntity chiTietSDEntity) {
         this.idCTSD = chiTietSDEntity.getIdCTSD();
         this.ngaySD = chiTietSDEntity.getNgaySD();
         this.soLuongSD = chiTietSDEntity.getSoLuongSD();
         this.maTB = chiTietSDEntity.getThietBiSD().getMaTB();
         this.maPhong = chiTietSDEntity.getPhongHocSD().getMaPhong();
     }
-    public ChiTietSDEntity toEntity(){
+
+    public ChiTietSDEntity toEntity() {
         ChiTietSDEntity chiTietSDEntity = new ChiTietSDEntity();
-        if(this.idCTSD != 0){
-            chiTietSDEntity.setIdCTSD(this.idCTSD);
-            chiTietSDEntity.setNgaySD(this.ngaySD);
-            chiTietSDEntity.setSoLuongSD(this.soLuongSD);
-        }
+        chiTietSDEntity.setIdCTSD(this.idCTSD);
+        chiTietSDEntity.setNgaySD(this.ngaySD);
+        chiTietSDEntity.setSoLuongSD(this.soLuongSD);
         return chiTietSDEntity;
     }
 }
