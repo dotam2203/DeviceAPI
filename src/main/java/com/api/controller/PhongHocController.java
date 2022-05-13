@@ -20,6 +20,11 @@ public class PhongHocController {
         return phongHocService.getDSPhongHoc();
     }
 
+    @GetMapping("/ph")
+    public PhongHocDTO layPhongHoc(@RequestParam(value = "maPhong") String maPhong) {
+        return phongHocService.getPhongHoc(maPhong);
+    }
+
     @PostMapping("")
     public PhongHocDTO themPhongHoc(@Valid @RequestBody PhongHocDTO phongHocDTO) {
         return phongHocService.themPhongHoc(phongHocDTO);

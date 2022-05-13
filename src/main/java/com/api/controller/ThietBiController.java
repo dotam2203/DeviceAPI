@@ -21,7 +21,7 @@ public class ThietBiController {
     }
 
     @GetMapping("/tb")
-    public ThietBiDTO layDSTBThietBi(@RequestParam(value = "maTB") String maTB){
+    public ThietBiDTO layThietBi(@RequestParam(value = "maTB") String maTB){
         return thietBiService.getThietBi(maTB);
     }
 

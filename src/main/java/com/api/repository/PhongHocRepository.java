@@ -8,5 +8,5 @@ import java.util.List;
 
 @Repository
 public interface PhongHocRepository extends JpaRepository<PhongHocEntity, String> {
-    /*List<PhongHocEntity> findByLoaiPhong_MaPhong(String maPhong);*/
+   /* List<PhongHocEntity> findByLoaiPhong_MaPhong(String maPhong);*/
 }

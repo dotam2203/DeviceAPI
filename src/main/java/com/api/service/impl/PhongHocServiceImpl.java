@@ -22,6 +22,11 @@ public class PhongHocServiceImpl implements PhongHocService {
         List<PhongHocEntity> DSPhongHoc = phongHocRepository.findAll();
         return DSPhongHoc.stream().map(PhongHocDTO::new).collect(Collectors.toList());
     }
+    @Override
+    public PhongHocDTO getPhongHoc(String maPhong) {
+        PhongHocEntity phongHoc = phongHocRepository.getById(maPhong);
+        return new PhongHocDTO(phongHoc);
+    }
 
     @Override
     public PhongHocDTO themPhongHoc(PhongHocDTO phongHocDTO) {
